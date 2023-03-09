@@ -35,7 +35,6 @@
             "sudo chmod -R 755 ./vendor/bin/*"
         ]
     },
-    "post-create-project-cmd": "composer run install-wp",
     "config": {
         "allow-plugins": {
             "composer/installers": true,
