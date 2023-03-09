@@ -30,16 +30,16 @@ if (!$config) {
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'database_name_here' );
+define( 'DB_NAME', $config['DB_DATABASE'] );
 
 /** MySQL database username */
-define( 'DB_USER', 'username_here' );
+define( 'DB_USER', $config['DB_USERNAME']  );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'password_here' );
+define( 'DB_PASSWORD', $config['DB_PASSWORD'] );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', $config['DB_HOST']  );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
@@ -56,14 +56,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'put your unique phrase here' );
-define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
-define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
-define( 'NONCE_KEY',        'put your unique phrase here' );
-define( 'AUTH_SALT',        'put your unique phrase here' );
-define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
-define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
-define( 'NONCE_SALT',       'put your unique phrase here' );
+define( 'AUTH_KEY',         $config['AUTH_KEY'] );
+define( 'SECURE_AUTH_KEY',  $config['SECURE_AUTH_KEY'] );
+define( 'LOGGED_IN_KEY',    $config['LOGGED_IN_KEY'] );
+define( 'NONCE_KEY',        $config['NONCE_KEY'] );
+define( 'AUTH_SALT',        $config['AUTH_SALT'] );
+define( 'SECURE_AUTH_SALT', $config['SECURE_AUTH_SALT'] );
+define( 'LOGGED_IN_SALT',   $config['LOGGED_IN_SALT'] );
+define( 'NONCE_SALT',       $config['NONCE_SALT'] );
 
 /**#@-*/
 
@@ -73,7 +73,7 @@ define( 'NONCE_SALT',       'put your unique phrase here' );
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = 'wp_';
+$table_prefix = $config['TABLE_PREFIX'];
 
 /**
  * For developers: WordPress debugging mode.
@@ -94,7 +94,7 @@ define( 'WP_DEBUG', false );
 // Je définis l'URL vers la page d'accueil de mon site
 define(
     'WP_HOME',
-    rtrim ( 'put_your_home_url_here', '/' )
+    rtrim ( $config['HOME_URL'], '/' )
 );
 
 // Je définis l'URL vers le dossier source de WordPress
