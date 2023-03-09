@@ -1,6 +1,7 @@
 {
     "name": "trema/wordpress",
     "description": "Trema Wordpress installer",
+    "type": "project",
     "license": "MIT",
     "version": "1.0.0",
     "require": {
