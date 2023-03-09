@@ -1,6 +1,7 @@
 {
     "name": "trema/wordpress",
     "description": "Trema Wordpress installer",
+    "license": "MIT",
     "require": {
         "php": ">=8.1"
     }
