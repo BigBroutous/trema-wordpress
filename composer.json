@@ -3,7 +3,39 @@
     "description": "Trema Wordpress installer",
     "type": "project",
     "license": "MIT",
+    "extra": {
+        "wordpress-install-dir": "wp"
+    },
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org",
+            "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+        }
+    ],
     "require": {
-        "php": ">=8.1"
+        "php": ">=8.1",
+        "johnpbloch/wordpress": "^6",
+        "wp-cli/wp-cli-bundle": "^2",
+        "wpackagist-plugin/contact-form-7": "^5.3",
+        "wpackagist-plugin/wordpress-seo": "^19",
+        "wpackagist-plugin/wp-fastest-cache": "^1",
+        "wpackagist-plugin/wordfence": "^7.8",
+        "wpackagist-plugin/post-types-order": "1.9.9.2",
+        "wpackagist-plugin/disable-gutenberg": "^2.8"
+    },
+    "scripts": {
+        "permissions": [
+            "sudo chown -R $USER:www-data .",
+            "sudo find . -type f -exec chmod 664 {} +",
+            "sudo find . -type d -exec chmod 775 {} +",
+            "sudo chmod 644 .htaccess"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "johnpbloch/wordpress-core-installer": true
+        }
     }
 }
