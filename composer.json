@@ -26,7 +26,6 @@
         "wpackagist-theme/twentytwentytwo": "^1.3"
     },
     "scripts": {
-        "test": "echo \"source .env && ./vendor/bin/wp core install --url=\\$HOME_URL --title=\\$SITE_NAME --admin_user=\\$ADMIN_USER --admin_email=\\$ADMIN_EMAIL --admin_password=\\$ADMIN_PASSWORD\"",
         "install-wp": "echo \"source .env && ./vendor/bin/wp core install --url=\\$HOME_URL --title=\\$SITE_NAME --admin_user=\\$ADMIN_USER --admin_email=\\$ADMIN_EMAIL --admin_password=\\$ADMIN_PASSWORD\" | bash",
         "permissions": [
             "sudo chown -R $USER:www-data .",
@@ -36,6 +35,7 @@
             "sudo chmod -R 755 ./vendor/bin/*"
         ]
     },
+    "post-create-project-cmd": "composer run install-wp",
     "config": {
         "allow-plugins": {
             "composer/installers": true,
