@@ -1,0 +1,7 @@
+{
+    "name": "trema/wordpress",
+    "description": "Trema Wordpress installer",
+    "require": {
+        "php": ">=8.1",
+    }
+}
