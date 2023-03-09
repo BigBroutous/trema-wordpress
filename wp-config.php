@@ -18,6 +18,16 @@
  * @package WordPress
  */
 
+/** Get config from .env */
+if (!file_exists('./.env')) {
+    throw new Error("No config file.");
+}
+
+$config = parse_ini_file('./.env');
+if (!$config) {
+    throw new Error("Wrong config file format.");
+}
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', 'database_name_here' );
