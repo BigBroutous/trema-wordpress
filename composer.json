@@ -23,7 +23,7 @@
         "wpackagist-plugin/wordfence": "^7.8",
         "wpackagist-plugin/post-types-order": "^2",
         "wpackagist-plugin/disable-gutenberg": "^2.8",
-        "wpackagist-theme/twentytwentytwo": "^1.3"
+        "wpackagist-theme/twentytwenty": "^2"
     },
     "scripts": {
         "install-wp": [
