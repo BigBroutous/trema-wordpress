@@ -19,11 +19,11 @@
  */
 
 /** Get config from .env */
-if (!file_exists(__DIR__ . '/.env')) {
+if (!file_exists(__DIR__ . '/config/.env')) {
     throw new Error("No config file.");
 }
 
-$config = parse_ini_file(__DIR__ . '/.env');
+$config = parse_ini_file(__DIR__ . '/config/.env');
 if (!$config) {
     throw new Error("Wrong config file format.");
 }
