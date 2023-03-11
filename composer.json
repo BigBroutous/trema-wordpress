@@ -18,10 +18,10 @@
         "johnpbloch/wordpress": "^6",
         "wp-cli/wp-cli-bundle": "^2",
         "wpackagist-plugin/contact-form-7": "^5.3",
-        "wpackagist-plugin/wordpress-seo": "^19",
+        "wpackagist-plugin/wordpress-seo": "^20",
         "wpackagist-plugin/wp-fastest-cache": "^1",
         "wpackagist-plugin/wordfence": "^7.8",
-        "wpackagist-plugin/post-types-order": "1.9.9.2",
+        "wpackagist-plugin/post-types-order": "^2",
         "wpackagist-plugin/disable-gutenberg": "^2.8",
         "wpackagist-theme/twentytwentytwo": "^1.3"
     },
