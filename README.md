@@ -6,7 +6,7 @@ Deploy a composer based WordPress website.
 
 - Use `composer create-project trema/wordpress` to perform the composer-based installation.
 - Create your `config/.env` file out from `config/.env.dist`
-- Then run the automated wp-cli installation : `composer run install-wp`. You can skip this test if you plan to use an already existing database.
+- Then run the automated wp-cli installation : `composer run install-wp`. You can skip this step if you plan to use an already existing database.
 
 Your website is ready to go :tada:
 
